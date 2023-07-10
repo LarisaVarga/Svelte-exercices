@@ -4,12 +4,14 @@
 
   import Icon from 'svelte-awesome';
   import chevronRight from 'svelte-awesome/icons/chevronRight';
+  import chevronDown from 'svelte-awesome/icons/chevronDown';
   import heart from 'svelte-awesome/icons/heart';
   import star from 'svelte-awesome/icons/star';
   import shoppingCart from 'svelte-awesome/icons/shoppingCart';
   import BoopIcon from './components/BoopIcon.svelte';
   import BoopTextIconBtn from './components/BoopTextIconBtn.svelte';
-    import BoopTextIconBtn2 from './components/BoopTextIconBtn2.svelte';
+  import BoopTextIconBtn2 from './components/BoopTextIconBtn2.svelte';
+  import { Button, Dropdown, DropdownItem, DropdownDivider, Chevron } from 'flowbite-svelte'
 
 </script>
 
@@ -39,26 +41,12 @@
   </button>
 
 </div>
-
-<h1 class="text-3xl font-bold my-4">
+<!-- 
+<h1 class="text-3xl font-bold mt-10 mb-4">
   Cards
 </h1>
 
 <div class="flex gap-5">
-  <!-- <div class="card w-1/4 rounded overflow-hidden shadow-md hover:shadow-lg cursor-pointer">
-    <img class="w-full h-64 object-cover" src="https://cdn.shopify.com/s/files/1/1132/5272/files/Nicks3_7b381e7a-f96d-4cbb-b42d-d7bb28e2f1e6.jpg?v=1685467325" alt="Sustainable Clothing">
-    <div class="p-4">
-      <div class="font-bold text-xl mb-2">Sustainable Clothing</div>
-      <p class="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
-      </p>
-      <div class="mt-4">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Best Seller</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Sale</span>
-      </div>
-    </div>
-  </div> -->
-  
   
   <div class="card w-1/4 rounded overflow-hidden shadow-md cursor-pointer hover:shadow-lg hover:outline hover:outline-green-500">
     <div class="relative">
@@ -181,10 +169,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
-<h1 class="text-3xl font-bold my-4">
+<h1 class="text-3xl font-bold mt-10 mb-4">
   Links
 </h1>
 <div>
@@ -193,6 +181,69 @@
 </div>
 
 
+<h1 class="text-3xl font-bold mt-10 mb-4">
+  Dropdowns
+</h1>
+<div class="flex gap-5">
+  <div>
+    <h2 class="my-3">Preline</h2>
+    <div class="hs-dropdown relative inline-flex">
+      <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+        Actions
+        <svg class="hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700" aria-labelledby="hs-dropdown-default">
+        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="/">
+          Newsletter
+        </a>
+        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="/">
+          Purchases
+        </a>
+        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="/">
+          Downloads
+        </a>
+        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="/">
+          Team Account
+        </a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2 class="my-3">Flowbite Svlete</h2>
+    <Button>Dropdown button<div class="rotate-180"><Chevron></Chevron></div></Button>
+    <Dropdown>
+      <DropdownItem>Dashboard</DropdownItem>
+      <DropdownDivider/>
+      <DropdownItem>Settings</DropdownItem>
+      <DropdownItem>Earnings</DropdownItem>
+      <DropdownItem slot="footer">Separated link</DropdownItem>
+    </Dropdown>
+  
+  </div>
+
+  <div>
+    <h2 class="my-3">Daisy UI</h2>
+
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <details class="dropdown mb-32 {open ? "open":""}">
+      <summary class="m-1 btn">
+        Dropdown
+        <Icon class="h-3" data="{chevronDown}"/>
+
+      </summary>
+      <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+        <li><a href="/">Item 1</a></li>
+        <li><a href="/">Item 2</a></li>
+      </ul>
+    </details>
+  </div>
+
+</div>
+
+<div class="my-56"></div>
 <style>
   .btn-animation {
       transition: all .4s ease-in-out;
@@ -210,6 +261,8 @@
     99.99% {transform: rotate(360deg);}
     100% {transform: rotate(0deg);}
   }
+
+
 </style>
 
 
