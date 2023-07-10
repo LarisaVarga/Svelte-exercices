@@ -64,7 +64,7 @@
       <div class="">
         <h3 class="font-bold text-xl mb-2">Sustainable Clothing 1</h3>
         <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
+          Made in: <span class="text-blue-500">Nepal</span>
         </p>
       </div>
 
@@ -107,7 +107,7 @@
       <div class="">
         <h3 class="font-bold text-xl mb-2">Sustainable Clothing 2</h3>
         <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
+          Made in: <span class="text-blue-500">Nepal</span>
         </p>
       </div>
 
@@ -151,7 +151,7 @@
       <div class="">
         <h3 class="font-bold text-xl mb-2">Sustainable Clothing 3</h3>
         <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
+          Made in: <span class="text-blue-500">Nepal</span>
         </p>
       </div>
 
@@ -179,10 +179,10 @@
 <div class="flex">
   <a href="/" class="text-red-600 font-medium uppercase cursor-pointer mr-4">Click me</a>
   <a href="/" class="text-blue-600 font-medium uppercase cursor-pointer underline italic mr-4">Click me</a>
-  <a href="/" class="text-green-600 font-medium uppercase cursor-pointer italic flex items-center mr-4">
+  <a href="/" class="text-teal-600 font-medium uppercase cursor-pointer italic flex items-center mr-4">
     Click me 
     <Icon class="h-3 ml-1" data="{arrowRight}"/>
-    </a>
+  </a>
 </div>
 
 
@@ -256,6 +256,7 @@
       <ul class="p-2 mt-1 shadow menu bg-base-100 rounded w-52 {dropdownOpen ? "d-block" : "hidden"}" data="{chevronDown}">
         <li><a href="/">Item 1</a></li>
         <li><a href="/">Item 2</a></li>
+        <li><a href="/">Item 3</a></li>
       </ul>
     </div>
   </div>

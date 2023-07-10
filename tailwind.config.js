@@ -8,6 +8,7 @@ export default {
       height: {
         '1px': '1px',
         '108': '27rem',
+        '100': '25rem',
         "bottom-card": 'calc( 100% - 15rem )',
       },
       inset: {
