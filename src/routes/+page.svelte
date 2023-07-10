@@ -5,6 +5,7 @@
   import Icon from 'svelte-awesome';
   import chevronRight from 'svelte-awesome/icons/chevronRight';
   import chevronDown from 'svelte-awesome/icons/chevronDown';
+  import arrowRight from 'svelte-awesome/icons/arrowRight';
   import heart from 'svelte-awesome/icons/heart';
   import star from 'svelte-awesome/icons/star';
   import shoppingCart from 'svelte-awesome/icons/shoppingCart';
@@ -12,7 +13,7 @@
   import BoopTextIconBtn from './components/BoopTextIconBtn.svelte';
   import BoopTextIconBtn2 from './components/BoopTextIconBtn2.svelte';
   import { Button, Dropdown, DropdownItem, DropdownDivider, Chevron } from 'flowbite-svelte'
-
+  let dropdownOpen = false;
 </script>
 
 
@@ -41,7 +42,7 @@
   </button>
 
 </div>
-<!-- 
+
 <h1 class="text-3xl font-bold mt-10 mb-4">
   Cards
 </h1>
@@ -169,15 +170,19 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 
 <h1 class="text-3xl font-bold mt-10 mb-4">
   Links
 </h1>
-<div>
-  <a href="/" class="text-red-600 font-medium uppercase cursor-pointer">Click me</a>
-  <a href="/" class="text-blue-600 font-medium uppercase cursor-pointer underline italic">Click me</a>
+<div class="flex">
+  <a href="/" class="text-red-600 font-medium uppercase cursor-pointer mr-4">Click me</a>
+  <a href="/" class="text-blue-600 font-medium uppercase cursor-pointer underline italic mr-4">Click me</a>
+  <a href="/" class="text-green-600 font-medium uppercase cursor-pointer italic flex items-center mr-4">
+    Click me 
+    <Icon class="h-3 ml-1" data="{arrowRight}"/>
+    </a>
 </div>
 
 
@@ -188,7 +193,7 @@
   <div>
     <h2 class="my-3">Preline</h2>
     <div class="hs-dropdown relative inline-flex">
-      <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+      <button id="hs-dropdown-default" type="button" class="w-72 hs-dropdown-toggle p-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
         Actions
         <svg class="hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -213,7 +218,7 @@
   </div>
   <div>
     <h2 class="my-3">Flowbite Svlete</h2>
-    <Button>Dropdown button<div class="rotate-180"><Chevron></Chevron></div></Button>
+    <Button>Dropdown button<div class=""><Chevron></Chevron></div></Button>
     <Dropdown>
       <DropdownItem>Dashboard</DropdownItem>
       <DropdownDivider/>
@@ -228,17 +233,31 @@
     <h2 class="my-3">Daisy UI</h2>
 
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <details class="dropdown mb-32 {open ? "open":""}">
-      <summary class="m-1 btn">
+    <details class="dropdown mb-32">
+      <summary class="m-1 btn w-52">
         Dropdown
-        <Icon class="h-3" data="{chevronDown}"/>
-
+        <Icon class="h-3 ease-in-out duration-300" data="{chevronDown}"/>
       </summary>
       <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
         <li><a href="/">Item 1</a></li>
         <li><a href="/">Item 2</a></li>
       </ul>
     </details>
+  </div>
+    <div>
+    <h2 class="my-3">Vanilla</h2>
+
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="dropdown mb-32" on:click={() => (dropdownOpen = !dropdownOpen)}>
+      <div class="btn w-52 flex justify-between">
+        Dropdown
+        <Icon class="h-3 ease-in-out duration-300 {dropdownOpen ? "rotate-180" : ""}" data="{chevronDown}"/>
+      </div>
+      <ul class="p-2 mt-1 shadow menu bg-base-100 rounded w-52 {dropdownOpen ? "d-block" : "hidden"}" data="{chevronDown}">
+        <li><a href="/">Item 1</a></li>
+        <li><a href="/">Item 2</a></li>
+      </ul>
+    </div>
   </div>
 
 </div>
