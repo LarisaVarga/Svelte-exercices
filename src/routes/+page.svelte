@@ -12,12 +12,15 @@
   import BoopIcon from './components/BoopIcon.svelte';
   import BoopTextIconBtn from './components/BoopTextIconBtn.svelte';
   import BoopTextIconBtn2 from './components/BoopTextIconBtn2.svelte';
-  import { Button, Dropdown, DropdownItem, DropdownDivider, Chevron } from 'flowbite-svelte'
+  import { Button, Dropdown, DropdownItem, DropdownDivider, Chevron } from 'flowbite-svelte';
+  import PopUp from './components/PopUp.svelte';
+    import BurgerMenu from './components/BurgerMenu.svelte';
+
   let dropdownOpen = false;
 </script>
 
-
-<h1 class="text-3xl font-bold mb-4"> Buttons </h1>
+<BurgerMenu></BurgerMenu>
+<h1 class="text-3xl font-bold mb-4">Buttons</h1>
 
 <div class="flex">
   <BoopTextIconBtn btnText={"See how we're different 1"} btnIcon={chevronRight}></BoopTextIconBtn>
@@ -43,9 +46,7 @@
 
 </div>
 
-<h1 class="text-3xl font-bold mt-10 mb-4">
-  Cards
-</h1>
+<h1 class="text-3xl font-bold mt-10 mb-4"> Cards </h1>
 
 <div class="flex gap-5">
   
@@ -173,9 +174,8 @@
 </div>
 
 
-<h1 class="text-3xl font-bold mt-10 mb-4">
-  Links
-</h1>
+<h1 class="text-3xl font-bold mt-10 mb-4"> Links </h1>
+
 <div class="flex">
   <a href="/" class="text-red-600 font-medium uppercase cursor-pointer mr-4">Click me</a>
   <a href="/" class="text-blue-600 font-medium uppercase cursor-pointer underline italic mr-4">Click me</a>
@@ -186,21 +186,20 @@
 </div>
 
 
-<h1 class="text-3xl font-bold mt-10 mb-4">
-  Dropdowns
-</h1>
+<h1 class="text-3xl font-bold mt-10 mb-4"> Dropdowns </h1>
+
 <div class="flex gap-5">
   <div>
     <h2 class="my-3">Preline</h2>
     <div class="hs-dropdown relative inline-flex">
-      <button id="hs-dropdown-default" type="button" class="w-72 hs-dropdown-toggle p-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-        Actions
+      <button id="hs-dropdown-default" type="button" class="w-60 hs-dropdown-toggle p-3 flex justify-between items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+        Dropdown button
         <svg class="hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
 
-      <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700" aria-labelledby="hs-dropdown-default">
+      <div class="hs-dropdown-menu absolute transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-60 hidden z-10 mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700" aria-labelledby="hs-dropdown-default">
         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="/">
           Newsletter
         </a>
@@ -233,7 +232,7 @@
     <h2 class="my-3">Daisy UI</h2>
 
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <details class="dropdown mb-32">
+    <details class="dropdown">
       <summary class="m-1 btn w-52">
         Dropdown
         <Icon class="h-3 ease-in-out duration-300" data="{chevronDown}"/>
@@ -248,12 +247,12 @@
     <h2 class="my-3">Vanilla</h2>
 
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="dropdown mb-32" on:click={() => (dropdownOpen = !dropdownOpen)}>
-      <div class="btn w-52 flex justify-between">
+    <div class="dropdown" on:click={() => (dropdownOpen = !dropdownOpen)}>
+      <button class="btn w-52 flex justify-between">
         Dropdown
         <Icon class="h-3 ease-in-out duration-300 {dropdownOpen ? "rotate-180" : ""}" data="{chevronDown}"/>
-      </div>
-      <ul class="p-2 mt-1 shadow menu bg-base-100 rounded w-52 {dropdownOpen ? "d-block" : "hidden"}" data="{chevronDown}">
+      </button>
+      <ul class="p-2 mt-1 shadow menu bg-base-100 rounded w-52 absolute {dropdownOpen ? "d-block" : "hidden"}" data="{chevronDown}">
         <li><a href="/">Item 1</a></li>
         <li><a href="/">Item 2</a></li>
         <li><a href="/">Item 3</a></li>
@@ -262,6 +261,12 @@
   </div>
 
 </div>
+
+
+
+<h1 class="text-3xl font-bold mt-10 mb-4 s-y_bCXRrkrYfP">Pop Ups / Modals</h1>
+
+<PopUp btnClasses={"btn-animation bg-gradient-to-r from-sky-700 via-sky-400 via-cyan-400 to-sky-700 text-white uppercase py-2 px-6 rounded-lg font-medium italic flex items-center hover:drop-shadow-md mr-3"}/>
 
 <div class="my-56"></div>
 <style>
