@@ -7,10 +7,11 @@
 
   function toggleModal() {
     isModalOpen = !isModalOpen;
+    document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
   }
 </script>
 
-<main>
+<div>
   <button class="{btn2Classes}" on:click={toggleModal}>Pop up scale up animation</button>
 
   {#if isModalOpen}
@@ -65,4 +66,4 @@
       color: #000;
     }
   </style>
-</main>
+</div>

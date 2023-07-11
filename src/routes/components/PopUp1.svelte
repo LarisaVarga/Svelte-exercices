@@ -10,11 +10,12 @@
 
   function togglePopUp() {
     isPopUpVisible = !isPopUpVisible;
+    document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
   }
 
-  function closePopUp() {
-    isPopUpVisible = false;
-  }
+  // function closePopUp() {
+  //   isPopUpVisible = false;
+  // }
 </script>
 
 <div>
@@ -27,7 +28,7 @@
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="popup-bg">
       <div class="popup-content" on:click={(e) => e.stopPropagation()} transition:fade>
-        <button class="close-btn" on:click={closePopUp}>
+        <button class="close-btn" on:click={togglePopUp}>
           <span class="close-icon"><CancelIcon></CancelIcon></span>
         </button>
         <h2>PopUp Content</h2>

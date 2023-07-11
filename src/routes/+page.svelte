@@ -67,7 +67,7 @@
       <div class="">
         <h3 class="font-bold text-xl mb-2">Sustainable Clothing 1</h3>
         <p class="text-gray-700 text-base">
-          Made in: <span class="text-blue-500">Nepal</span>
+          Made in: <span class="text-blue-500 hover:underline">Nepal</span>
         </p>
       </div>
 
@@ -110,7 +110,7 @@
       <div class="">
         <h3 class="font-bold text-xl mb-2">Sustainable Clothing 2</h3>
         <p class="text-gray-700 text-base">
-          Made in: <span class="text-blue-500">Nepal</span>
+          Made in: <span class="text-blue-500 hover:underline">Nepal</span>
         </p>
       </div>
 
@@ -154,7 +154,7 @@
       <div class="">
         <h3 class="font-bold text-xl mb-2">Sustainable Clothing 3</h3>
         <p class="text-gray-700 text-base">
-          Made in: <span class="text-blue-500">Nepal</span>
+          Made in: <span class="text-blue-500 hover:underline">Nepal</span>
         </p>
       </div>
 
