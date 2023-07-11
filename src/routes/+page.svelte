@@ -13,8 +13,10 @@
   import BoopTextIconBtn from './components/BoopTextIconBtn.svelte';
   import BoopTextIconBtn2 from './components/BoopTextIconBtn2.svelte';
   import { Button, Dropdown, DropdownItem, DropdownDivider, Chevron } from 'flowbite-svelte';
-  import PopUp from './components/PopUp.svelte';
-    import BurgerMenu from './components/BurgerMenu.svelte';
+  import PopUp1 from './components/PopUp1.svelte';
+  import BurgerMenu from './components/BurgerMenu.svelte';
+  import BoopTextIconLink from './components/BoopTextIconLink.svelte';
+    import PopUp2 from './components/PopUp2.svelte';
 
   let dropdownOpen = false;
 </script>
@@ -183,8 +185,8 @@
     Click me 
     <Icon class="h-3 ml-1" data="{arrowRight}"/>
   </a>
+  <BoopTextIconLink aLink={"/"} textLink={"Click me now!"}></BoopTextIconLink>
 </div>
-
 
 <h1 class="text-3xl font-bold mt-10 mb-4"> Dropdowns </h1>
 
@@ -265,8 +267,12 @@
 
 
 <h1 class="text-3xl font-bold mt-10 mb-4 s-y_bCXRrkrYfP">Pop Ups / Modals</h1>
+<div class="flex">
+  <PopUp1 btnClasses={"btn-animation bg-gradient-to-r from-sky-700 via-sky-400 via-cyan-400 to-sky-700 text-white uppercase py-2 px-6 rounded-lg font-medium italic flex items-center hover:drop-shadow-md mr-4"}/>
+  <PopUp2 btn2Classes={"btn-animation bg-gradient-to-r from-sky-700 via-sky-400 via-cyan-400 to-sky-700 text-white uppercase py-2 px-6 rounded-lg font-medium italic flex items-center hover:drop-shadow-md mr-4"}></PopUp2>
 
-<PopUp btnClasses={"btn-animation bg-gradient-to-r from-sky-700 via-sky-400 via-cyan-400 to-sky-700 text-white uppercase py-2 px-6 rounded-lg font-medium italic flex items-center hover:drop-shadow-md mr-3"}/>
+</div>
+
 
 <div class="my-56"></div>
 <style>

@@ -20,7 +20,7 @@
 <div>
   <button class="{btnClasses}" on:click={togglePopUp}>
     <!-- {#if isPopUpVisible} Hide PopUp {:else} Show PopUp{/if} -->
-    Show PopUp
+    Pop up transition animation
   </button>
 
   {#if isPopUpVisible}
@@ -74,14 +74,5 @@
       font-size: 20px;
       font-weight: bold;
       color: #000;
-    }
-
-    .btn-animation {
-    transition: all .4s ease-in-out;
-    background-size: 300% 100%;
-    }
-    .btn-animation:hover {
-      background-position: 100% 0;
-      transition: all .4s ease-in-out;
     } 
   </style>
