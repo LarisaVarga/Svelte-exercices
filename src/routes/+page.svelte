@@ -19,6 +19,7 @@
     import PopUp2 from './components/PopUp2.svelte';
     import LoginFrom from './components/LoginFrom.svelte';
     import LoginFrom2 from './components/LoginFrom2.svelte';
+    import Form from './components/Form.svelte';
 
   let dropdownOpen = false;
 </script>
@@ -279,6 +280,9 @@
   <LoginFrom></LoginFrom>
   <div class="bg-slate-100 p-4 rounded-md">
     <LoginFrom2></LoginFrom2>
+  </div>
+  <div class="p-4 rounded-md border-2 border-slate-300 ">
+    <Form></Form>
   </div>
 </div>
 
