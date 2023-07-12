@@ -10,7 +10,7 @@
 
   function togglePopUp() {
     isPopUpVisible = !isPopUpVisible;
-    document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
+    document.body.style.overflow = isPopUpVisible ? 'hidden' : 'auto';
   }
 
   // function closePopUp() {

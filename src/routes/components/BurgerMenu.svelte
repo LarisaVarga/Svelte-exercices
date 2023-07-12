@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
 
   let isMenuOpen = false;
@@ -6,6 +7,15 @@
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
+  
+    // Run this code after the component is rendered
+  onMount(() => {
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach((menuItem) => {
+      menuItem.addEventListener('click', toggleMenu);
+    });
+  });
+  
 </script>
 
 <div class:open={isMenuOpen}>
@@ -20,16 +30,18 @@
     <!-- <button class="close-btn" on:click={toggleMenu}>
       <span class="close-icon">+</span>
     </button> -->
-    <ul class="list-none p-0 m-4 pt-6">
-      <li class="mb-4 transition ease-in duration-300">Menu Item 1</li>
-      <li class="mb-4 transition ease-in duration-300">Menu Item 2</li>
-      <li class="mb-4 transition ease-in duration-300">Menu Item 3</li>
-    </ul>
+    <div class="p-0 m-4 pt-6 flex flex-col">
+      <a href="/" class="menu-item mb-4">Menu Item 1</a>
+      <a href="/" class="menu-item mb-4">Menu Item 2</a>
+      <a href="/" class="menu-item mb-4">Menu Item 3</a>
+    </div>
   </div>
 </div>
 
   <style>
-
+    .burger-menu .line {
+      transition: transform 0.3s ease;
+    }
     .open .burger-menu .line {
       transition: transform 0.3s ease;
     }

@@ -17,6 +17,8 @@
   import BurgerMenu from './components/BurgerMenu.svelte';
   import BoopTextIconLink from './components/BoopTextIconLink.svelte';
     import PopUp2 from './components/PopUp2.svelte';
+    import LoginFrom from './components/LoginFrom.svelte';
+    import LoginFrom2 from './components/LoginFrom2.svelte';
 
   let dropdownOpen = false;
 </script>
@@ -266,11 +268,18 @@
 
 
 
-<h1 class="text-3xl font-bold mt-10 mb-4 s-y_bCXRrkrYfP">Pop Ups / Modals</h1>
+<h1 class="text-3xl font-bold mt-10 mb-4">Pop Ups / Modals</h1>
 <div class="flex">
   <PopUp1 btnClasses={"btn-animation bg-gradient-to-r from-sky-700 via-sky-400 via-cyan-400 to-sky-700 text-white uppercase py-2 px-6 rounded-lg font-medium italic flex items-center hover:drop-shadow-md mr-4"}/>
   <PopUp2 btn2Classes={"btn-animation bg-gradient-to-r from-sky-700 via-sky-400 via-cyan-400 to-sky-700 text-white uppercase py-2 px-6 rounded-lg font-medium italic flex items-center hover:drop-shadow-md mr-4"}></PopUp2>
+</div>
 
+<h1 class="text-3xl font-bold mt-10 mb-4">Forms</h1>
+<div class="grid grid-cols-2 gap-8">
+  <LoginFrom></LoginFrom>
+  <div class="bg-slate-100 p-4 rounded-md">
+    <LoginFrom2></LoginFrom2>
+  </div>
 </div>
 
 
