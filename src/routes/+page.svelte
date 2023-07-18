@@ -16,10 +16,10 @@
   import PopUp1 from './components/PopUp1.svelte';
   import BurgerMenu from './components/BurgerMenu.svelte';
   import BoopTextIconLink from './components/BoopTextIconLink.svelte';
-    import PopUp2 from './components/PopUp2.svelte';
-    import LoginFrom from './components/LoginFrom.svelte';
-    import LoginFrom2 from './components/LoginFrom2.svelte';
-    import Form from './components/Form.svelte';
+  import PopUp2 from './components/PopUp2.svelte';
+  import LoginFrom from './components/LoginFrom.svelte';
+  import LoginFrom2 from './components/LoginFrom2.svelte';
+  import Form from './components/Form.svelte';
 
   let dropdownOpen = false;
 </script>

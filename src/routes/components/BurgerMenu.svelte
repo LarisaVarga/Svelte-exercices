@@ -31,8 +31,8 @@
       <span class="close-icon">+</span>
     </button> -->
     <div class="p-0 m-4 pt-6 flex flex-col">
-      <a href="/" class="menu-item mb-4">Menu Item 1</a>
-      <a href="/" class="menu-item mb-4">Menu Item 2</a>
+      <a href="/" class="menu-item mb-4">Page One</a>
+      <a href="/page-two" class="menu-item mb-4">Page Two</a>
       <a href="/" class="menu-item mb-4">Menu Item 3</a>
     </div>
   </div>
