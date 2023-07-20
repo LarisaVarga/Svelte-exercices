@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
+	import { page } from '$app/stores';
 
   let isMenuOpen = false;
 
@@ -27,14 +28,14 @@
   </div>
 
   <div class="menu fixed top-0 right-0 w-72 h-full bg-white shadow-md z-40" transition:fly={{ x: isMenuOpen ? 0 : '100%', duration: 300 }}>
-    <!-- <button class="close-btn" on:click={toggleMenu}>
-      <span class="close-icon">+</span>
-    </button> -->
-    <div class="p-0 m-4 pt-6 flex flex-col">
-      <a href="/" class="menu-item mb-4">Page One</a>
-      <a href="/page-two" class="menu-item mb-4">Page Two</a>
-      <a href="/" class="menu-item mb-4">Menu Item 3</a>
-    </div>
+    <ul class="p-0 m-4 pt-6 flex flex-col">
+			<li class="menu-item mb-4" aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+				<a href="/">Home</a>
+			</li>
+			<li class="menu-item mb-4" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+				<a href="/about">About</a>
+			</li>
+		</ul>
   </div>
 </div>
 

@@ -8,11 +8,8 @@
     import heart from "svelte-awesome/icons/heart";
     import star from "svelte-awesome/icons/star";
     import shoppingCart from "svelte-awesome/icons/shoppingCart";
-    import BurgerMenu from "../components/BurgerMenu.svelte";
 
 </script>
-
-<h2>This is page 2</h2>
 
 <h1 class="text-3xl font-bold mt-10 mb-4"> Cards </h1>
 
