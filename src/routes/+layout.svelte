@@ -1,6 +1,6 @@
 <script>
   import "../app.css";
-  import BurgerMenu from './components/BurgerMenu.svelte';
+  import BurgerMenu from '$lib/components/BurgerMenu.svelte';
 
 </script>
 

@@ -9,16 +9,16 @@
   import heart from 'svelte-awesome/icons/heart';
   import star from 'svelte-awesome/icons/star';
   import shoppingCart from 'svelte-awesome/icons/shoppingCart';
-  import BoopIcon from './components/BoopIcon.svelte';
-  import BoopTextIconBtn from './components/BoopTextIconBtn.svelte';
-  import BoopTextIconBtn2 from './components/BoopTextIconBtn2.svelte';
+  import BoopIcon from '$lib/components/BoopIcon.svelte';
+  import BoopTextIconBtn from '$lib/components/BoopTextIconBtn.svelte';
+  import BoopTextIconBtn2 from '$lib/components/BoopTextIconBtn2.svelte';
   import { Button, Dropdown, DropdownItem, DropdownDivider, Chevron } from 'flowbite-svelte';
-  import PopUp1 from './components/PopUp1.svelte';
-  import BoopTextIconLink from './components/BoopTextIconLink.svelte';
-  import PopUp2 from './components/PopUp2.svelte';
-  import LoginFrom from './components/LoginFrom.svelte';
-  import LoginFrom2 from './components/LoginFrom2.svelte';
-  import Form from './components/Form.svelte';
+  import PopUp1 from '$lib/components/PopUp1.svelte';
+  import BoopTextIconLink from '$lib/components/BoopTextIconLink.svelte';
+  import PopUp2 from '$lib/components/PopUp2.svelte';
+  import LoginFrom from '$lib/components/LoginFrom.svelte';
+  import LoginFrom2 from '$lib/components/LoginFrom2.svelte';
+  import Form from '$lib/components/Form.svelte';
 
   let dropdownOpen = false;
 </script>

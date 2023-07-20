@@ -3,8 +3,8 @@
 
 
     import { Icon } from "svelte-awesome";
-    import BoopIcon from "../components/BoopIcon.svelte";
-    import BoopTextIconBtn2 from "../components/BoopTextIconBtn2.svelte";
+    import BoopIcon from "$lib/components/BoopIcon.svelte";
+    import BoopTextIconBtn2 from "$lib/components/BoopTextIconBtn2.svelte";
     import heart from "svelte-awesome/icons/heart";
     import star from "svelte-awesome/icons/star";
     import shoppingCart from "svelte-awesome/icons/shoppingCart";
