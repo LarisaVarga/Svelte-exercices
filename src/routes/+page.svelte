@@ -14,7 +14,6 @@
   import BoopTextIconBtn2 from './components/BoopTextIconBtn2.svelte';
   import { Button, Dropdown, DropdownItem, DropdownDivider, Chevron } from 'flowbite-svelte';
   import PopUp1 from './components/PopUp1.svelte';
-  import BurgerMenu from './components/BurgerMenu.svelte';
   import BoopTextIconLink from './components/BoopTextIconLink.svelte';
   import PopUp2 from './components/PopUp2.svelte';
   import LoginFrom from './components/LoginFrom.svelte';
@@ -24,7 +23,6 @@
   let dropdownOpen = false;
 </script>
 
-<BurgerMenu></BurgerMenu>
 <h1 class="text-3xl font-bold mb-4">Buttons</h1>
 
 <div class="flex">

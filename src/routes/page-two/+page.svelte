@@ -11,7 +11,6 @@
     import BurgerMenu from "../components/BurgerMenu.svelte";
 
 </script>
-<BurgerMenu></BurgerMenu>
 
 <h2>This is page 2</h2>
 
