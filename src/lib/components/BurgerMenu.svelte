@@ -35,6 +35,9 @@
 			<li class="menu-item mb-4" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
+      <li class="menu-item mb-4" aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+				<a href="/galery">Galery</a>
+			</li>
 		</ul>
   </div>
 </div>
