@@ -1,7 +1,6 @@
 <script>
 // @ts-nocheck
 import { onMount } from 'svelte';
-
     onMount(() => {
         const fileInput = document.getElementById('fileInput');
         const uploadForm = document.getElementById('uploadForm');
@@ -21,12 +20,14 @@ import { onMount } from 'svelte';
         });
       }
 
-      if(uploadForm){
+    if(uploadForm){
         uploadForm.addEventListener('submit', (event) => {
             event.preventDefault();
             loopInLocalStorageMediaFiles(localStorage, gallery);
         });
       }
+    loopInLocalStorageMediaFiles(localStorage, gallery);
+
     });
 
     function loopInLocalStorageMediaFiles(ls, gallery){
@@ -38,6 +39,7 @@ import { onMount } from 'svelte';
         if (key.endsWith('.jpg') || key.endsWith('.png') || key.endsWith('.jpeg')) {
             mediaElement = document.createElement('img');
             mediaElement.src = fileData;
+            mediaElement.style.width = "33%";
         } else if (key.endsWith('.mp4')) {
             mediaElement = document.createElement('video');
             mediaElement.src = fileData;
@@ -52,4 +54,8 @@ import { onMount } from 'svelte';
     <input type="file" id="fileInput" accept="image/*,video/*" multiple>
     <button type="submit">Upload</button>
 </form>
-<div id="gallery"></div>
+<div id="gallery" class="flex flex-wrap"></div>
+
+<style>
+
+</style>
