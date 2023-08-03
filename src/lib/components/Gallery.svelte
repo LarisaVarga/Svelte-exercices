@@ -19,6 +19,7 @@ import { onMount } from 'svelte';
             }
         });
       }
+    loopInLocalStorageMediaFiles(localStorage, gallery);
 
     if(uploadForm){
         uploadForm.addEventListener('submit', (event) => {
@@ -27,7 +28,6 @@ import { onMount } from 'svelte';
         });
       }
     loopInLocalStorageMediaFiles(localStorage, gallery);
-
     });
 
     function loopInLocalStorageMediaFiles(ls, gallery){
